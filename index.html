@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescent City RP - Loading</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Add a fallback background image -->
+    <img src="https://media.discordapp.net/attachments/1342651681095159979/1353187127449485502/image.png?ex=67e0bd38&is=67df6bb8&hm=c329818a9f3d6e0b5beba51e595f7fcaaf69b6edd98588bbd115f2114ea16962&=&format=webp&quality=lossless&width=1768&height=805" 
+         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;" 
+         alt="Background">
+    <div class="background-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+    
+    <div class="background"></div>
+    
+    <div class="container">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Server Logo" class="logo">
+        </div>
+        
+        <h1 class="server-name">Crescent City RP</h1>
+        
+        <div class="loading-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-text">
+                <span id="loading-percentage">0%</span>
+                <span id="loading-status">Initializing...</span>
+            </div>
+        </div>
+        
+        <p class="tagline">Welcome to the city where your story begins</p>
+        
+        <!-- Server info container inside the main container -->
+        <!-- Remove or comment out the announcements box from the server-info-container -->
+        <div class="server-info-container">
+            <div class="info-box player-count-box">
+                <div class="info-icon">👥</div>
+                <div id="player-count">0/0 Players</div>
+            </div>
+            
+            <!-- Remove this section
+            <div class="info-box announcements-box">
+                <div class="info-header">ANNOUNCEMENT</div>
+                <div id="announcements" class="announcements-content">
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    
+    <!-- Move keybinds panel above tips panel -->
+    <div class="keybinds-panel">
+        <div class="keybinds-header">CONTROLS</div>
+        <div class="keybinds-grid" id="keybinds-grid">
+            <!-- Keybinds will be loaded here dynamically -->
+        </div>
+    </div>
+    
+    <div class="tips-panel">
+        <div class="tips-header">SERVER TIPS</div>
+        <div class="tip-content" id="tip-content">
+            <!-- Tips will be loaded here dynamically -->
+        </div>
+    </div>
+    
+    <!-- Add expandable announcements and changelogs to top left -->
+    <!-- Make sure the expandable announcements panel is properly set up -->
+    <div class="info-panels-container">
+        <div class="expandable-panel announcements-panel">
+            <div class="panel-header" id="announcements-header">
+                <span>ANNOUNCEMENTS</span>
+                <div class="expand-icon">+</div>
+            </div>
+            <div class="panel-content" id="announcements">
+                <!-- Announcements will be loaded here dynamically -->
+            </div>
+        </div>
+        
+        <div class="expandable-panel changelog-panel">
+            <div class="panel-header" id="changelog-header">
+                <span>CHANGE LOGS</span>
+                <div class="expand-icon">+</div>
+            </div>
+            <div class="panel-content" id="changelog">
+                <!-- Changelogs will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="server-rules-panel">
+        <div id="server-rules">
+            <!-- Rules will be loaded here dynamically -->
+        </div>
+    </div>
+    
+    <div class="music-controls">
+        <button id="music-toggle" class="music-btn">
+            <i class="music-icon">♪</i>
+        </button>
+        <div class="music-info">
+            <span id="music-title">Background Music</span>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://nui-game-internal/ui/script.js"></script>
+</body>
+</html>
